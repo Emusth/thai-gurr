@@ -1,0 +1,1120 @@
+/*
+
+File Name: style.less
+Date: 05/28/19
+Programmer: Gray Mros
+
+*/
+/*
+Google Fonts:
+ font-family: 'Lora', serif;
+ font-family: 'Montserrat', sans-serif;
+ font-family: 'Patrick Hand', cursive;
+
+.headingFont() {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodyFont() {
+    font-family: 'Lora', serif;
+}
+
+.bodyFontSans() {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.bodyFontHand() {
+    font-family: 'Patrick Hand', cursive;
+}
+*/
+/* MOBILE STYLESHEET */
+/* Color Palette #3961 color palette from https://colorpalettes.net/color-palette-3961/ */
+/* Fonts */
+/* Parametric mixin for headings */
+/* Hamburger nav menu from https://www.cssscript.com/basic-hamburger-toggle-menu-css-vanilla-javascript/ */
+.nav {
+  -webkit-transition: right 0.5s ease;
+  -moz-transition: right 0.5s ease;
+  -ms-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
+  background: #F8F8F8;
+  color: #8F8F8F;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 100vh;
+  right: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 20rem;
+  z-index: 1;
+}
+.nav.expanded {
+  right: 0;
+  position: absolute;
+}
+nav ul {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+nav ul li {
+  padding: 1rem;
+}
+nav a {
+  text-decoration: none;
+  color: #BA2733;
+}
+nav a:hover {
+  font-weight: bold;
+}
+.nav-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 2rem;
+  right: 1rem;
+  position: absolute;
+  top: 1rem;
+  width: 3rem;
+  z-index: 2;
+}
+.nav-toggle:hover {
+  opacity: 0.8;
+}
+.nav-toggle .nav-toggle-bar,
+.nav-toggle .nav-toggle-bar::after,
+.nav-toggle .nav-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #ffffff;
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+  opacity: 0.9;
+}
+.nav-toggle .nav-toggle-bar {
+  margin-top: 0;
+}
+.nav-toggle .nav-toggle-bar::after {
+  margin-top: 0.8rem;
+}
+.nav-toggle .nav-toggle-bar::before {
+  margin-top: -0.8rem;
+}
+.nav-toggle.expanded .nav-toggle-bar {
+  background: transparent;
+}
+.nav-toggle.expanded .nav-toggle-bar::after,
+.nav-toggle.expanded .nav-toggle-bar::before {
+  background: #6A6A6F;
+  margin-top: 0;
+}
+.nav-toggle.expanded .nav-toggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.nav-toggle.expanded .nav-toggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*End hamburger menu*/
+/*
+                  ****************************************************
+                  ****************************************************
+                  ****************************************************
+The following CSS affects all screen sizes larger than 675 pixels wide.
+*/
+@media only screen and (min-width: 675px) {
+  .nav-toggle {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    right: 2rem;
+    top: unset;
+    bottom: 1rem;
+    width: 3rem;
+  }
+}
+/*
+                  ****************************************************
+                  ****************************************************
+                  ****************************************************
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+*/
+@media only screen and (min-width: 1025px) {
+  .stickyNav {
+    display: none;
+  }
+}
+/* Allows smooth scrolling around page using navigation buttons - Only supported in Chrome, Firefox, and Opera*/
+html {
+  scroll-behavior: smooth;
+  font-family: 'Lora', serif;
+}
+/* Header Style */
+header {
+  background-color: #BA2733;
+  position: relative;
+}
+header img:nth-of-type(1) {
+  position: absolute;
+  max-width: 100%;
+  height: auto;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header img:nth-of-type(2) {
+  display: none;
+}
+h1 {
+  display: block;
+  padding-top: 11rem;
+  padding-bottom: 0.5rem;
+  font-size: 2.3rem;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #F8F8F8;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+/* Tagline */
+header > p {
+  text-align: center;
+  font-family: 'Lora', serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  padding-bottom: 2rem;
+  font-style: italic;
+}
+header aside {
+  display: none;
+}
+/* Navbar for desktop */
+header .desktop-nav {
+  display: none;
+}
+/* Nav bar style is in the hamburger.less file */
+/* End Header Style*/
+/* Main Style*/
+/* Main aside for mobile */
+/* Aside */
+section > aside {
+  padding-top: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+section > aside p {
+  color: #BA2733;
+  display: block;
+  padding-top: 1rem;
+}
+/* Restaurant information */
+/* Mon-Fri hours */
+/* Sat, Sun hours */
+/* Phone number */
+section > aside p:nth-of-type(3) a {
+  text-decoration: none;
+  color: #BA2733;
+  padding-top: none;
+}
+/* Address */
+section > aside p:nth-of-type(4) {
+  display: inline-block;
+}
+/* Map button */
+section > aside button {
+  display: inline-block;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding-top: 0;
+}
+section > aside button a i {
+  font-size: 2rem;
+  color: #BA2733;
+}
+/* End restaurant information */
+/* End aside*/
+/* Introduction paragraph. */
+main section > p {
+  font-family: 'Patrick Hand', cursive;
+  margin: 1rem 1rem 0 1rem;
+  text-align: center;
+  color: #000000;
+  padding: 1rem 0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  letter-spacing: 0.08rem;
+}
+/* Slideshow - Style also in slick/slick.css and slick/slick-theme.css*/
+.photo-slider img {
+  margin: 0 auto;
+}
+.photo-slider div {
+  margin: 0 10px;
+}
+/* End slideshow */
+/* Top of page button*/
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 2rem;
+  background-color: #DDD;
+  color: #555;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+#back2Top:hover {
+  background-color: #DDF;
+  color: #000;
+}
+/* End top of page button */
+/* Restaurant menu section. */
+main section {
+  background-color: #ffffff;
+  font-family: 'Patrick Hand', cursive;
+}
+/* Mobile and tablet menu headers */
+main h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  text-align: center;
+  font-size: 2.4rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+/* Desktop menu headers */
+main h2.bigger-h2 {
+  display: none;
+}
+/* Menu unordered list */
+main ul {
+  padding-top: 0.5rem;
+  border-radius: 0.3rem;
+}
+/* Menu item list items. */
+main li {
+  padding: 0 1rem 2rem 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+main li:nth-of-type(1) {
+  padding-top: 1rem;
+}
+/* Menu item name. */
+main h3 {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.6rem;
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+/* Menu item price. */
+main li p:nth-of-type(1) {
+  padding: 0;
+  text-align: right;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-style: italic;
+  display: block;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+/* Menu item calories and quantity. */
+main li p:nth-of-type(2) {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 0;
+  padding-top: 0.4rem;
+  font-size: 0.8rem;
+  color: #000000;
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+/* Menu item description. */
+main li p:nth-of-type(3) {
+  font-family: 'Patrick Hand', cursive;
+  font-weight: 400;
+  line-height: 1.7rem;
+  letter-spacing: 0.07rem;
+  font-size: 1.2rem;
+  padding: 0;
+  padding-top: 3rem;
+  color: #6A6A6F;
+  display: block;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+/* Not displaying the aside in mobile view. */
+main > aside {
+  display: none;
+}
+/* End Main Style*/
+/* Start Footer Style*/
+footer section {
+  background-color: #BA2733;
+  color: #ffffff;
+  text-align: center;
+}
+footer h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+footer p {
+  padding-bottom: 0.4rem;
+}
+/* "Order Now" */
+footer p:nth-of-type(1) {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+/* Phone number. */
+footer p:nth-of-type(2) {
+  padding-bottom: 3rem;
+}
+footer p:nth-of-type(2) a {
+  color: #ffffff;
+  text-decoration: none;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+/* "Open" */
+footer p:nth-of-type(3) {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  padding-bottom: 0.8rem;
+}
+/* "Mon-Fri: 12pm-8pm" */
+footer p:nth-of-type(4) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+/* "Sat,Sun: 11am-7pm" */
+footer p:nth-of-type(5) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+}
+/* "Address" */
+footer p:nth-of-type(6) {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.5rem;
+  padding-bottom: 0.4rem;
+}
+/* Link to address in Google Maps. */
+footer button {
+  background-color: transparent;
+  border: none;
+}
+footer button a {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+/* Div around Google Maps API */
+.around-map {
+  padding: 1rem;
+}
+/* Google Maps API. */
+footer div > div {
+  width: 100%;
+  height: 50vh;
+  border-radius: 0.3rem;
+}
+/* Social media feed for desktop */
+.social-feeds {
+  display: none;
+}
+/* Social media header. */
+footer h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+/* Social media unordered list. */
+footer ul li {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+}
+/* Social media icon links. */
+footer li a {
+  color: #ffffff;
+}
+/* Font Awesome utilizes the <i> tag */
+/*"Copyright"*/
+footer p:nth-of-type(7) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+}
+/* End footer style.*/
+/*
+                  ****************************************************
+                  ****************************************************
+                  ****************************************************
+The following CSS affects all screen sizes larger than 675 pixels wide.
+*/
+@media only screen and (min-width: 675px) {
+  /* Small and large device logo */
+  header img:nth-of-type(1) {
+    display: none;
+  }
+  /* Medium device logo */
+  header img:nth-of-type(2) {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    padding-left: 4rem;
+    padding-top: 0.2rem;
+  }
+  /* H1 heading */
+  h1 {
+    text-align: left;
+    padding-left: 9rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 3rem;
+  }
+  /* Tagline */
+  header > p {
+    text-align: left;
+    padding-left: 12rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  /* Nav bar style is in the hamburger.less file */
+  /* End Header Style*/
+  /* Main */
+  /* Menu unordered list */
+  main ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0.5rem;
+    border-radius: 0.3rem;
+  }
+  /* End Main Style*/
+  /* Start Footer Style*/
+  footer section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  /* Thai Gurr */
+  footer h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  /* Generic footer P */
+  footer p {
+    padding-bottom: 0;
+  }
+  /* "Order" */
+  footer p:nth-of-type(1) {
+    padding-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  /* Phone number. */
+  footer p:nth-of-type(2) {
+    padding-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 9;
+  }
+  /* "Open" */
+  footer p:nth-of-type(3) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* "Mon-Fri: 12pm-8pm" */
+  footer p:nth-of-type(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  /* "Sat,Sun: 11am-7pm" */
+  footer p:nth-of-type(5) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    padding-bottom: 0;
+  }
+  /* "Address" */
+  footer p:nth-of-type(6) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* Link to address in Google Maps. */
+  footer button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+  }
+  footer button a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+  }
+  /* Div around Google Maps API */
+  .around-map {
+    padding: 0 1rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 8;
+  }
+  /* Google Maps API. */
+  footer div > div {
+    height: 35vh;
+  }
+  /* Social links */
+  footer .social-links {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+  /*"Copyright"*/
+  footer p:nth-of-type(7) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 12;
+    grid-row-end: 13;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+}
+/*
+
+DESKTOP STYLESHEET ****************************************************
+                   ****************************************************
+                   ****************************************************
+
+The following CSS affects all screen sizes larger than 1024 pixels wide.
+
+*/
+@media only screen and (min-width: 1025px) {
+  /* Header */
+  header {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 5fr 2fr 5fr 2fr;
+  }
+  /* Medium device logo */
+  header img:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    top: unset;
+    left: unset;
+    right: 15rem;
+    max-width: 100%;
+    height: auto;
+  }
+  /* H1 heading */
+  h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 3rem;
+  }
+  /* Tagline */
+  header > p {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    padding: 0;
+    font-size: 1.2rem;
+  }
+  /* header aside for desktop */
+  /* Aside */
+  header aside {
+    display: grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-template-columns: auto auto;
+    padding-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+  }
+  header aside p {
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+  }
+  /* Restaurant information */
+  /* Mon-Fri hours */
+  header aside p:nth-of-type(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-top: 0;
+  }
+  /* Sat, Sun hours */
+  header aside p:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* Phone number */
+  header aside p:nth-of-type(3) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  header aside p:nth-of-type(3) a {
+    text-decoration: none;
+    color: #ffffff;
+    padding-top: none;
+  }
+  /* Address */
+  header aside p:nth-of-type(4) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    display: inline-block;
+    line-height: 0.5rem;
+    padding-top: 0;
+  }
+  /* Map button */
+  header aside button {
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+  }
+  header aside button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+  }
+  header aside button a i {
+    padding-right: 0.5rem;
+    font-size: 1.7rem;
+    color: #ffffff;
+  }
+  /* Navbar for desktop */
+  header .desktop-nav {
+    display: block;
+    margin: 0 auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  /* Desktop nav list */
+  .desktop-nav ul {
+    position: relative;
+    text-align: left;
+  }
+  /* Desktop nav list items */
+  .desktop-nav li {
+    display: inline-block;
+    padding: 0;
+    padding-right: 1rem;
+  }
+  /* Desktop nav anchor tags */
+  .desktop-nav a {
+    font-family: 'Patrick Hand', cursive;
+    color: #ffffff;
+    font-size: 1.8rem;
+  }
+  .desktop-nav a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  /* End Header Style*/
+  /* Main */
+  /* Main aside for mobile and tablet*/
+  main section aside {
+    display: none;
+  }
+  /* Introduction paragraph. */
+  main section > p {
+    width: 550px;
+    margin: 0 auto;
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+  /* Slideshow - Style also in slick/slick.css and slick/slick-theme.css*/
+  /* Slideshow container */
+  .photo-slider {
+    min-width: 800px;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+  /* Slideshow slides */
+  .photo-slider div {
+    margin: 0;
+  }
+  /* End slideshow */
+  /* Top of page button*/
+  #back2Top {
+    width: 75px;
+    line-height: 75px;
+  }
+  main section > div:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    min-width: 800px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+  }
+  /* Mobile and tablet menu headers */
+  main h2.smaller-h2 {
+    display: none;
+  }
+  /* Desktop menu headers */
+  main h2.bigger-h2 {
+    display: inline-block;
+    width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  /* Noodles list header */
+  main h2:nth-of-type(2) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  /* Rice list header */
+  main h2:nth-of-type(4) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  /* Soup list header */
+  main h2:nth-of-type(6) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  /* This n' That list header */
+  main h2:nth-of-type(8) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  /* Dessert list header */
+  main h2:nth-of-type(10) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  /* Drinks list header */
+  main h2:nth-of-type(12) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  /* Menu lists */
+  main ul {
+    display: block;
+    margin: 0 auto;
+    width: 85%;
+    padding-top: 0.5rem;
+    border-radius: 0.3rem;
+  }
+  /* Odd numbered lists */
+  main ul:nth-of-type(odd) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-right: 0.5rem;
+  }
+  /* Even numbered lists */
+  main ul:nth-of-type(even) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 0.5rem;
+  }
+  /* Noodles list */
+  main ul:nth-of-type(1) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* Rice list */
+  main ul:nth-of-type(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* Soup list */
+  main ul:nth-of-type(3) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  /* This n' That list */
+  main ul:nth-of-type(4) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  /* Dessert list */
+  main ul:nth-of-type(5) {
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  /* Drinks list */
+  main ul:nth-of-type(6) {
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  /* Menu list items*/
+  main ul li {
+    padding: 0;
+    padding-top: 1rem;
+  }
+  /* Menu item name. */
+  main h3 {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+  /* Menu item price. */
+  main li p:nth-of-type(1) {
+    font-size: 1.8rem;
+  }
+  /* Menu item description. */
+  main li p:nth-of-type(3) {
+    font-weight: normal;
+    letter-spacing: 0.09rem;
+    font-size: 1.4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+  /* End Main Style*/
+  /* Start Footer Style*/
+  footer section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+    padding-top: 3rem;
+  }
+  /* Thai Gurr */
+  footer h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0;
+    row-gap: 2rem;
+  }
+  /* "Order" */
+  footer p:nth-of-type(1) {
+    margin: 0 0 0 auto;
+    padding-right: 11rem;
+    padding-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+  }
+  /* Phone number. */
+  footer p:nth-of-type(2) {
+    margin: 0 0 0 auto;
+    padding-right: 8rem;
+    padding-bottom: 0;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+  }
+  /* "Open" */
+  footer p:nth-of-type(3) {
+    padding: 0;
+    margin: 0 0 0 auto;
+    padding-right: 11rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* "Mon-Fri: 12pm-8pm" */
+  footer p:nth-of-type(4) {
+    margin: 0 0 0 auto;
+    padding-right: 5rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  /* "Sat,Sun: 11am-7pm" */
+  footer p:nth-of-type(5) {
+    margin: 0 0 0 auto;
+    padding-right: 5rem;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+  /* "Address" */
+  footer p:nth-of-type(6) {
+    padding: 0;
+    margin: 0 auto 0 0;
+    padding-left: 9rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  /* Link to address in Google Maps. */
+  footer button {
+    margin: 0 auto 0 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+  }
+  /* Div around Google Maps API */
+  .around-map {
+    margin: 0 auto 0 0;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 9;
+  }
+  /* Google Maps API. */
+  footer div > div {
+    width: 350px;
+    height: 350px;
+  }
+  /* Social media links for mobile and tablet*/
+  .social-links {
+    display: none;
+  }
+  /* Social media feeds for desktop*/
+  .social-feeds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    grid-row-gap: 2rem;
+    grid-column-gap: 2rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 15;
+    border-top: 1px solid #ffffff;
+  }
+  /* Social media header. */
+  footer .social-feeds h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  /*"Copyright"*/
+  footer p:nth-of-type(7) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 15;
+    grid-row-end: 16;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+}

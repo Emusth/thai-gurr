@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="author" content="Gray Mros">
+    <title>Thai Gurr Restaurant</title>
+    <!--Google Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:100,200,300,400,400i,600,700,800,900,900i|Roboto+Mono|Patrick+Hand&display=swap"
+        rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/helper.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!--Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/dfee4bf98b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <!--Primary Heading-->
+        <h1>Thai Gurr</h1>
+        <!-- Logo used in mobile-->
+        <img src="images/logo-yellow.png" alt="Thai Gurr logo">
+        <!-- Logo used in tablet and desktop -->
+        <img src="images/smaller-logo.png" alt="Thai Gurr logo">
+        <!--Tagline-->
+        <p>It's Great Thai Food</p>
+        <!-- Header aside for desktop -->
+        <aside>
+            <!-- Restaurant Info -->
+            <p>Mon-Fri: 12pm-8pm</p>
+            <p>Sat, Sun: 11am-7pm</p>
+            <p><a href="tel:+5035555555">503 555 5555</a></p>
+            <button><a href="https://goo.gl/maps/oK2N9dNrdRzDehAe9" target="_blank"><i class="fas fa-directions"></i>SW
+                    Rose Biggi Ave</a></button>
+        </aside>
+        <!--Nav menu mobile and tablet-->
+        <div class="stickyNav" id="myStickyNav">
+            <!--Hamburger toggle div-->
+            <div class="nav-toggle">
+                <div class="nav-toggle-bar"></div>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#noodles">Noodles</a></li>
+                    <li><a href="#rice">Rice</a></li>
+                    <li><a href="#soup">Soup</a></li>
+                    <li><a href="#thisnthat">This n' That</a></li>
+                    <li><a href="#dessert">Dessert</a></li>
+                    <li><a href="#drinks">Drinks</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Nav menu desktop -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#noodles">Noodles</a></li>
+                <li><a href="#rice">Rice</a></li>
+                <li><a href="#soup">Soup</a></li>
+                <li><a href="#thisnthat">This n' That</a></li>
+                <li><a href="#dessert">Dessert</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Main/Menu Section-->
+        <section>
+            <!-- Main aside mobile -->
+            <aside>
+                <!-- Restaurant Info -->
+                <p>Mon-Fri: 12pm-8pm</p>
+                <p>Sat, Sun: 11am-7pm</p>
+                <p><a href="tel:+5035555555">503 555 5555</a></p>
+                <p>4250 SW Rose Biggi Ave</p>
+                <button><a href="https://goo.gl/maps/oK2N9dNrdRzDehAe9" target="_blank"><i
+                            class="fas fa-directions"></i></a></button>
+            </aside>
+            <!--Sticky top of page button-->
+            <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+            <!--Introduction Paragraph-->
+            <p>Find out what
+                you've been missing! Thai Gurr has mastered 20 unique dishes, and they are all great. </p>
+            <!-- Slideshow -->
+            <div class="photo-slider">
+                <div><a href="#rice"><img src="images/duck-curry.jpg" alt="Duck curry"></a></div>
+                <div><a href="#soup"><img src="images/duck-noodle.jpg" alt="Duck noodle"></a></div>
+                <div><a href="#rice"><img src="images/khao-man-gai.jpg" alt="Khao man gai"></a></div>
+                <div><a href="#noodles"><img src="images/pad-thai.jpg" alt="Pad Thai"></a></div>
+                <div><a href="#rice"><img src="images/garlic-fried-pork.jpg" alt="Garlic fried pork"></a></div>
+                <div><a href="#soup"><img src="images/tom-yum.jpg" alt="Tom yum"></a></div>
+            </div>
+            <div>
+                <!--Noodles-->
+                    <h2 class="smaller-h2">&bull; Noodles &bull;</h2>
+                    <h2 class="bigger-h2">Noodles</h2>
+                <ul id="noodles">
+                    <li>
+                        <h3>Pad See Ew</h3>
+                        <p>9</p>
+                        <p>790 Cal - 2 Pints</p>
+                        <p>Wide rice noodles, chicken, and vegetables stir fried in soy sauce.</p>
+                    </li>
+                    <li>
+                        <h3>Pad Thai</h3>
+                        <p>9</p>
+                        <p>890 Cal - 2 Pints</p>
+                        <p>Rice noodles stir fried with chicken, egg, vegetables, served with bean sprouts.</p>
+                    </li>
+                    <li>
+                        <h3>Stir Fry Beef</h3>
+                        <p>8.5</p>
+                        <p>950 Cal - 2 Pints</p>
+                        <p>Wheat noodles stir fried with beef, broccoli, carrots, and soy sauce.</p>
+                    </li>
+                    <li>
+                        <h3>Dry Tom Yum</h3>
+                        <p>7</p>
+                        <p>720 Cal - 2 Pints</p>
+                        <p>Wheat noodles and breaded chicken cooked in a hot and sour soup, served dry.</p>
+                    </li>
+                </ul>
+                <!--End Noodles-->
+
+                <!--Rice-->
+                    <h2 class="smaller-h2">&bull; Rice &bull;</h2>
+                    <h2 class="bigger-h2">Rice</h2>
+                <ul id="rice">
+                    <li>
+
+                        <h3>Khao Man Gai</h3>
+                        <p>8</p>
+                        <p>750 Cal - 2 Pints</p>
+                        <p>Moist chicken breast, served over rice boiled in broth with a side of ginger sauce.</p>
+                    </li>
+                    <li>
+                        <h3>Duck Curry</h3>
+                        <p>9</p>
+                        <p>890 Cal - 2 Pints</p>
+                        <p>Duck curry served over rice.</p>
+                    </li>
+                    <li>
+                        <h3>Garlic Fried Pork</h3>
+                        <p>7.5</p>
+                        <p>770 Cal - 2 Pints</p>
+                        <p>Pan fried garlic sizzled with pork, served over rice.</p>
+                    </li>
+                </ul>
+                <!--End Rice-->
+
+                <!--Soup-->
+                    <h2 class="smaller-h2">&bull; Soup &bull;</h2>
+                    <h2 class="bigger-h2">Soup</h2>
+                <ul id="soup">
+                    <li>
+                        <h3>Tom Yum</h3>
+                        <p>8</p>
+                        <p>750 Cal - 2.5 Pints</p>
+                        <p>Wheat noodles and breaded chicken in a creamy hot and sour soup.</p>
+                    </li>
+                    <li>
+                        <h3>Duck Noodle</h3>
+                        <p>7.5</p>
+                        <p>670 Cal - 2.5 Pints</p>
+                        <p>Egg noodles, dark duck meat, and vegetables in a light soup.</p>
+                    </li>
+                    <li>
+                        <h3>Boat Noodle</h3>
+                        <p>8.5</p>
+                        <p>720 Cal - 2.5 Pints</p>
+                        <p>Rice noodles with beef, pork meatballs and bokchoy, cooked in a rich broth.</p>
+                    </li>
+                </ul>
+                <!--End Soup-->
+
+                <!--This n' That-->
+                    <h2 class="smaller-h2">&bull; This n' That &bull;</h2>
+                    <h2 class="bigger-h2">This n' That</h2>
+                <ul id="thisnthat">
+                    <li>
+                        <h3>Fried Fish</h3>
+                        <p>7</p>
+                        <p>790 Cal - 1 Fish</p>
+                        <p>Entire tilapia fish fried whole til crispy.</p>
+                    </li>
+                    <li>
+                        <h3>Giant Dumplings</h3>
+                        <p>8</p>
+                        <p>740 Cal - 3 Dumplings</p>
+                        <p>Tennis ball sized dumplings stuffed with minced pork, shrimp, spices and vegetables.</p>
+                    </li>
+                    <li>
+                        <h3>Beef Larb</h3>
+                        <p>8</p>
+                        <p>790 Cal - 2 Pints</p>
+                        <p>Spicy minced beef tossed with onion chili, lime, salt and fish sauce, served with rice.</p>
+                    </li>
+                </ul>
+                <!--End This n' That-->
+
+                <!--Desser-->
+                    <h2 class="smaller-h2">&bull; Dessert &bull;</h2>
+                    <h2 class="bigger-h2">Dessert</h2>
+                <ul id="dessert">
+                    <li>
+                        <h3>Pandan Pancakes</h3>
+                        <p>5.5</p>
+                        <p>460 Cal - 5 Cakes</p>
+                        <p>Two inch pancakes made from pandan leaves.</p>
+                    </li>
+                    <li>
+                        <h3>Chocolate Bun</h3>
+                        <p>4</p>
+                        <p>470 Cal - 1 Bun</p>
+                        <p>Baseball sized bun soft baked with gooey milk chocolate inside.</p>
+                    </li>
+                    <li>
+                        <h3>Fried Banana</h3>
+                        <p>4</p>
+                        <p>410 Cal - 2 Bananas</p>
+                        <p>Two Bananas cut and battered in flour and coconut, fried golden.</p>
+                    </li>
+                    <li>
+                        <h3>Mango Ice Cream</h3>
+                        <p>6.5</p>
+                        <p>590 Cal - 3 Scoops</p>
+                        <p>Mango ice cream served with sweet sticky rice.</p>
+                    </li>
+                </ul>
+                <!--End Dessert-->
+
+                <!--Drinks-->
+                    <h2 class="smaller-h2">&bull; Drinks &bull;</h2>
+                    <h2 class="bigger-h2">Drinks</h2>
+                <ul id="drinks">
+                    <li>
+                        <h3>Honey Lime Bucket</h3>
+                        <p>5</p>
+                        <p>110 Cal - 16oz</p>
+                        <p>Honey, lime, soda water, and ice.</p>
+                    </li>
+                    <li>
+                        <h3>Fresh Pressed Juice</h3>
+                        <p>6</p>
+                        <p>90-200 Cal - 14oz</p>
+                        <p>Seasonal fruits pressed daily.</p>
+                    </li>
+                    <li>
+                        <h3>Thai Iced Tea</h3>
+                        <p>4</p>
+                        <p>280 Cal - 16oz</p>
+                        <p>Blend of Thai teas and sweetened condensed milk with ice.</p>
+                    </li>
+                </ul>
+                <!--End Drinks-->
+        </section>
+        <!--End Menu Section-->
+    </main>
+    <footer>
+        <!--Restaurant Information-->
+        <section>
+            <h2>Thai Gurr</h2>
+            <p>Order</p>
+            <p><a href="tel:+5035555555">503 555 5555</a></p>
+            <p>Open</p>
+            <p>Mon-Fri: 12pm-8pm</p>
+            <p>Sat, Sun: 11am-7pm</p>
+            <p>Address</p>
+            <button><a href="https://goo.gl/maps/oK2N9dNrdRzDehAe9">4250 SW Rose Biggi Ave, Beaverton, OR
+                    97005</a></button>
+            <div class="around-map">
+                <div id="map"></div>
+            </div>
+            <!--End restaurant informatoin-->
+            <!-- Social media -->
+
+            <!--Social media links mobile and tablet-->
+            <div class="social-links">
+                <h3>Find Us!</h3>
+                <ul>
+                    <!--Facebook link with font awesome icon-->
+                    <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-4x"></i></a></li>
+                    <!--Yelp link with font awesome icon-->
+                    <li><a href="https://yelp.com" target="_blank"><i class="fab fa-yelp fa-4x"></i></a></li>
+                </ul>
+            </div>
+            <!-- Social media feeds for desktop-->
+            <div class="social-feeds">
+                <h3>Connect With Us!</h3>
+                <!--Facebook feed, can be changed at https://developers.facebook.com/docs/plugins/page-plugin -->
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FThai-Gurr-601938276976332%2F&tabs=timeline&width=350&height=400&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="350" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
+                <!--Yelp Feed, can be changed by clicking share on any Yelp review and choosing the embedded option-->
+                <span class="yelp-review" data-review-id="XHRGLZHuRQWjPK90OH1XQw" data-hostname="www.yelp.com">Read <a
+                        href="https://www.yelp.com/user_details?userid=G7KpLAhF-jMDN05Erympbw"
+                        rel="nofollow noopener">Frank L.</a>'s <a
+                        href="https://www.yelp.com/biz/mcdonalds-portland-2?hrid=XHRGLZHuRQWjPK90OH1XQw"
+                        rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/d-AFGxgOM-fQVODjFSMxsw"
+                        rel="nofollow noopener">McDonald's</a> on <a href="https://www.yelp.com"
+                        rel="nofollow noopener">Yelp</a>
+                </span>
+            </div>
+            <!--Page Copyright-->
+            <p>Copyright Thai Gurr &copy; 2020</p>
+        </section>
+        <!--End footer information section-->
+    </footer>
+    <!-- Google Maps API -->
+    <script>
+        function initMap() {
+            var gurr = {
+                lat: 45.489863,
+
+                lng: -122.808485
+            };
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 15,
+                    center: gurr
+                });
+            var marker = new google.maps.Marker({
+                position: gurr,
+                map: map
+            });
+        }
+    </script>
+
+    <!-- Google Maps API Key-->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQ-HXHbgqABv-IDx9XDU0YkXMTDkvWPtE&callback=initMap">
+    </script>
+    <!-- jQuery library -->
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    <!-- Slider file -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <!-- Javascript file-->
+    <script async="async" src="scripts/scripts.js" type="text/javascript"></script>
+
+</body>
+
+</html>
